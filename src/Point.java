@@ -30,7 +30,7 @@ public class Point {
         return y;
     }
 
-    public void setx(int x){
+    public void setX(int x){
         this.x =x;
     }
 

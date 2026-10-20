@@ -21,12 +21,31 @@ public class Segment {
         return module;
     }
 
-    @Override // redefine, es opcional .
+    @Override
     public String toString(){
         return startPoint+ "- " + endPoint;
     }
 
+    public void setOffset(int offX, int offY ) {
+        startPoint.setOffset(offX, offY);
+        endPoint.setOffset(offX, offY);
+    }
 
+    public void setStartPoint(Point startPoint) {
+        this.startPoint = startPoint;
+    }
+
+    public void setEndPoint(Point endPoint) {
+        this.endPoint = endPoint;
+    }
+
+    public Point getStartPoint() {
+        return startPoint;
+    }
+
+    public Point getEndPoint() {
+        return endPoint;
+    }
 }
 
 
