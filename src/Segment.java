@@ -25,6 +25,8 @@ public class Segment {
     public String toString(){
         return startPoint+ "- " + endPoint;
     }
+
+
 }
 
 
