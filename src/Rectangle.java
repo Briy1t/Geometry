@@ -49,14 +49,29 @@ public class Rectangle extends Point {
 
     @Override
     public String toString() {
+
         return "(" + getX() + ", " + getY() + ") width: " + width + " height: " + height;
     }
 
     public int getArea() {
-        return this.width * this.height;
+
+        return width * height;
     }
 
     public Point getPoint() {
-        return new Point(this.getX(), this.getY());
+        return new Point(getX(), getY());
     }
+
+    public Point getTopLeftPoint(){
+        return new Point(getX(), getY() + height);
+    }
+
+    public Point getTopRightPoint(){
+        return new Point(getX()+ width, getY() +height);
+    }
+
+    public Point getBottomRightPoint(){
+        return new Point(getX() + width, getY());
+    }
+
 }

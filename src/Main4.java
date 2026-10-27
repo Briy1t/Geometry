@@ -17,5 +17,10 @@ public class Main4 {
 
         Point puntoInferiorIzquierdo = rectangle4.getPoint();
         System.out.println("El punto inferior izquierdo de rectangle4 es: " + puntoInferiorIzquierdo);
+
+        Rectangle r5= new Rectangle(new Point(5,6),6,8);
+        System.out.println("Arriba-Izquierda" + r5.getTopLeftPoint() + " Arriba_Derecha" +
+                r5.getTopRightPoint() + " Abajo_izquierda: " + r5.getBottomRightPoint() +
+                "Abajo-Derecha: " + r5.getBottomRightPoint());
     }
 }
