@@ -1,0 +1,62 @@
+public class Rectangle extends Point {
+    private final int width;
+    private final int height;
+
+    public Rectangle() {
+        super();
+        width = 0;
+        height = 0;
+    }
+
+    public Rectangle(Point point, int newWidth, int newHeight) {
+        super(point.getX(), point.getY());
+        width = newWidth;
+        height = newHeight;
+    }
+
+    public Rectangle(Segment segment) {
+        super();
+        int x, y;
+        Point startPoint = segment.getStartPoint();
+        Point endPoint = segment.getEndPoint();
+
+        if (startPoint.getX() < endPoint.getX()) {
+            x = startPoint.getX();
+            width = endPoint.getX() - startPoint.getX();
+        } else {
+            x = endPoint.getX();
+            width = startPoint.getX() - endPoint.getX();
+        }
+
+        if (startPoint.getY() < endPoint.getY()) {
+            y = startPoint.getY();
+            height = endPoint.getY() - startPoint.getY();
+        } else {
+            y = endPoint.getY();
+            height = startPoint.getY() - endPoint.getY();
+        }
+        setX(x);
+        setY(y);
+    }
+
+
+
+    public Rectangle(Point p1, Point p2) {
+        super(p1.getX(), p1.getY());
+        width = p2.getX() - p1.getX();
+        height = p2.getY() - p1.getY();
+    }
+
+    @Override
+    public String toString() {
+        return "(" + getX() + ", " + getY() + ") width: " + width + " height: " + height;
+    }
+
+    public int getArea() {
+        return this.width * this.height;
+    }
+
+    public Point getPoint() {
+        return new Point(this.getX(), this.getY());
+    }
+}
