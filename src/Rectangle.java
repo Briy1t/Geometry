@@ -54,7 +54,6 @@ public class Rectangle extends Point {
     }
 
     public int getArea() {
-
         return width * height;
     }
 
@@ -73,5 +72,15 @@ public class Rectangle extends Point {
     public Point getBottomRightPoint(){
         return new Point(getX() + width, getY());
     }
+
+    public int getWidth() {
+        return width;
+    }
+
+    public int getHeight() {
+        return height;
+    }
+
+
 
 }
